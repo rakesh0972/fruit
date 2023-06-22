@@ -20,9 +20,13 @@ const cart = () => {
 	return (
 		<div className="md:w-[80%] mx-auto">
 			<h1 className="font-lato text-4xl font-semibold text-center py-9">
-				Items in Cart
+				Cart Items
 			</h1>
-			{item.length < 0 && <div>No itms in cart</div>}
+			{item.length == 0 && (
+				<h1 className="font-lato text-2xl font-medium text-center py-9">
+					NO items in Cart
+				</h1>
+			)}
 			{item.map((fruit, i) => {
 				return (
 					<CartAdded
